@@ -5,7 +5,7 @@ At the start of the game, you will see the initial screen:
 
 
 For each guess that you make, it will tell you if you did it right or wrong. 
-It Does this by, for each char number, painting the background color depending on if exist or not, and if it's in the right position, in the secret number.
+It Does this by, for each char number, it paints the background color depending on if exist or not, and if it's in the right position, in the secret number.
 If the char number does not exist, will paint the background gray.
 If it exists but is not in the right position, it is painted yellow.
 And, for last, if it exists and is in the right position, it will show you the number in green.
