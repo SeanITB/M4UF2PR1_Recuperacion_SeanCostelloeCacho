@@ -6,7 +6,8 @@ function getRandomNumber(min, max)
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let randomNumber = getRandomNumber(10000, 99999)
+//let randomNumber = getRandomNumber(10000, 99999)
+let randomNumber = 93871
 let randomNumberStr = String(randomNumber);
 let randomNumberStrOriginal = randomNumberStr;
 let numberSize = 5;
@@ -23,26 +24,32 @@ function checkNumber()
     var userNumberStr = String(element.value);
     
     // for each difit, check if the are the same
-    const actualMark = [0, 0, 0, 0, 0] // 0 -> that char is not in the string, 1 -> that char is it, 2 -> that char is in that exact position 
+    const actualMark = [0, 0, 0, 0, 0] // 0 -> that char is not in the string, 1 -> that char is in the number, 2 -> that char is in that exact position 
     for (var index = 0; index < randomNumberStr.length; index++)
     {
         if (userNumberStr[index] == randomNumberStr[index])
         {
             actualMark[index] = 2;
-            randomNumberStr = setCharAt(randomNumberStr, index, '*');
+            if (index < randomNumberStr.length -1 ) { // prevent it from leaving the index
+                randomNumberStr = setCharAt(randomNumberStr, index, '*');
+            }
         }
-        console.log("after check: " + randomNumberStr);
-
+        console.log("The random " + randomNumberStr);
     }
-    
+    console.log("Acual mark " + actualMark + " and number " + randomNumberStr  + ".");
     for (var index = 0; index < randomNumberStr.length; index++)
     {
         for (var i = 0; i < randomNumberStr.length; i++)
         {
+            
             if (actualMark[index] != 2 && userNumberStr[index] == randomNumberStr[i])
             {
-                console.log("is in " + randomNumberStr[i] + " in position " + i + "for " + randomNumberStr);
+                console.log("Entro con " + randomNumberStr[i]);
                 actualMark[index] = 1;
+            }
+            else 
+            {
+                console.log("NO entro con " + randomNumberStr[i]);
             }
         }
         
@@ -93,7 +100,7 @@ function checkNumber()
     }
 }
 
-function setCharAt(str,index,chr) {
+function setCharAt(str, index, chr) {
     var repacedStr = "";
     if(index < str.length-1) 
     {
