@@ -12,3 +12,11 @@ And, for last, if it exists and is in the right position, it will show you the n
 
 
 ![image](https://github.com/SeanITB/M4UF2PR1_Recuperacion_SeanCostelloeCacho/assets/146827341/71d9922b-f760-494d-b311-393d0d76c9ae)
+
+
+When you win the game, you will see this:
+
+![image](https://github.com/SeanITB/M4UF2PR1_Recuperacion_SeanCostelloeCacho/assets/146827341/54819330-2065-49b4-8c71-290d75c11c5f)
+
+
+
